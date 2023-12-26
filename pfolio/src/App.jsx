@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
+import Navbar from "./components/Navbar";
+import { Home, About, Contact, Projects } from "./pages";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -9,12 +11,13 @@ function App() {
     <>
       <main className="bg-slate-500">
         <Router>
-          Navbar
+          <Navbar />
+
           <Routes>
-            <Route path="/" element="Home"></Route>
-            <Route path="/projects" element="Projects"></Route>
-            <Route path="contact" element={"Contact"}></Route>
-            <Route path="/about" element="About"></Route>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </Router>
       </main>
