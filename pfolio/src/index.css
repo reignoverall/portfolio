@@ -181,3 +181,12 @@ body:has(.card[data-color="green"]:hover) {
   box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
     0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
 }
+
+.neo-brutalism-red {
+  background: #912517;
+  position: relative;
+  border-radius: 10px;
+  border: #520303;
+  box-shadow: 0.6vmin 0.6vmin #580808, 1vmin 1vmin #520303, 1vmin 1vmin #520303,
+    0.65vmin 1vmin #280101, 1vmin 0.65vmin #520303;
+}
