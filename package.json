@@ -2,6 +2,7 @@
   "name": "pfolio",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://reignoverall.github.io/portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
