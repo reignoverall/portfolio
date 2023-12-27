@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <main className="bg-slate-500">
+      <main className="bg-slate-100">
         <Router>
           <Navbar />
 
