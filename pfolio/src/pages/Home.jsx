@@ -12,13 +12,14 @@ import HomeInfo from "../components/HomeInfo";
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
+  //Checks the dimensions of the screen and adjusts the Island Model size accordingly.
   const adjustIslandForScreenSize = () => {
     let screenScale, screenPosition;
     screenPosition = [0, -6.5, -43];
     let rotation = [0.1, 4.7, 0];
 
     if (window.innerWidth < 768) {
-      screenScale = [0.9, 0.9, 0.9];
+      screenScale = [0.7, 0.7, 0.7];
     } else {
       screenScale = [1, 1, 1];
     }
@@ -26,6 +27,7 @@ const Home = () => {
     return [screenScale, screenPosition, rotation];
   };
 
+  //Checks the dimensions of the screen and adjusts the Plane Model size accordingly.
   const adjustPlaneForScreenSize = () => {
     let screenScale, screenPosition;
 
@@ -43,14 +45,25 @@ const Home = () => {
     adjustIslandForScreenSize();
   const [planeScale, planePosition] = adjustPlaneForScreenSize();
   return (
-    <section className="w-full h-screen relative">
+    <section className="w-full h-screen relative overflow-hidden">
       {
         <div className="absolute top-24 left-0 right-0 z-10 flex items-center justify-center">
           {currentStage && <HomeInfo currentStage={currentStage} />}
         </div>
       }
+      {
+        <div className="absolute top-81 left-81 right-8 z-10 flex items-center justify-center">
+          <a
+            href="https://www.linkedin.com/in/samuel-onwukeme/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </div>
+      }
+
       <Canvas
-        className={`w-full h-screen bg-transparent ${
+        className={`w-full h-screen bg-transparent overflow-hidden ${
           isRotating ? "cursor-grabbing" : "cursor-grab"
         }`}
         camera={{ near: 0.1, far: 1000 }}

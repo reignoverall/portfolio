@@ -39,15 +39,14 @@ const Contact = () => {
   };
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
-      <div className="flex-1 min-w-[50%] flex flex-col">
+      <div className="flex-1 min-w-[50%] flex flex-col ">
         <h1 className="head-text">Get In Touch</h1>
-
         <form
-          className="w-full flex flex-col gap-7 mt-14"
+          className="w-full flex flex-col gap-7 mt-11"
           onSubmit={handleSubmit}
         >
           <label className="text-black-500 font-semibold">
-            Name
+            <span className="font-mono">Name</span>
             <input
               type="text"
               name="name"
@@ -61,7 +60,7 @@ const Contact = () => {
             />
           </label>
           <label className="text-black-500 font-semibold">
-            Email
+            <span className="font-mono">Email</span>
             <input
               type="email"
               name="email"
@@ -75,7 +74,7 @@ const Contact = () => {
             />
           </label>{" "}
           <label className="text-black-500 font-semibold">
-            Message
+            <span className="font-mono">Message</span>
             <input
               name="message"
               rows={4}

@@ -11,6 +11,7 @@
 
 body {
   font-family: "Work Sans", sans-serif;
+  overflow: hidden;
 }
 
 body:has(.card[data-color="blue"]:hover) {
@@ -33,7 +34,7 @@ body:has(.card[data-color="green"]:hover) {
 }
 @layer utilities {
   .max-container {
-    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[105px] px-8 min-h-[calc(100vh-80px)];
   }
 
   .head-text {
@@ -46,6 +47,10 @@ body:has(.card[data-color="green"]:hover) {
 
   .blue-gradient_text {
     @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
+  }
+
+  .red-gradient_text {
+    @apply bg-gradient-to-r from-[#db102e] to-[#5200cc] bg-clip-text text-transparent;
   }
 
   .input {
