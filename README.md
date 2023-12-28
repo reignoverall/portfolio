@@ -1,6 +1,7 @@
 Hey !
 My name is Samuel Onwukeme an UnderGrad at the University of Utah and this is my Portfolio Page. (Work in Progress)
-**(Github Pages doesn't support single page Applications so reloading a page will crash the site)**
+
+**(Github Pages doesn't support Single-Page Applications, so reloading a page will crash the site so reenter URL)**
 
 This page utilizes : Javascript, React (JSX, react-three-fiber), EmailJS.
 
