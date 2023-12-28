@@ -1,5 +1,6 @@
 Hey !
-My name is Samuel Onwukeme an UnderGrad at the University of Utah and this is my Portfolio Page.
+My name is Samuel Onwukeme an UnderGrad at the University of Utah and this is my Portfolio Page. (Work in Progress)
+**(Github Pages doesn't support single page Applications so reloading a page will crash the site)**
 
 This page utilizes : Javascript, React (JSX, react-three-fiber), EmailJS.
 
