@@ -17,8 +17,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        process.env.VITE_EMAILJS_SERVICE_ID,
+        process.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Sam",
@@ -26,8 +26,9 @@ const Contact = () => {
           to_email: "samuelonwukeme@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        process.env.VITE_EMAILJS_PUBLIC_KEY
       )
+
       .then(() => {
         setIsLoading(false);
         setForm({ name: "", email: "", message: "" });
