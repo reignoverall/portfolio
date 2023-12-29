@@ -52,12 +52,13 @@ const Home = () => {
         </div>
       }
       {
-        <div className="absolute top-81 left-81 right-8 z-10 flex items-center justify-center">
+        <div className="absolute top-81 left-81 right-8 z-10 ">
           <a
             href="https://www.linkedin.com/in/samuel-onwukeme/"
             target="_blank"
+            className="text-sm rounded-sm  bg-blue-800 text-white"
           >
-            LinkedIn
+            Linked<span className="font-bold">In</span>
           </a>
         </div>
       }
