@@ -7,7 +7,7 @@ const CTA = () => {
       <p className="text-lg font-semibold">
         Wanna Reach Out ? Contact Info Here
       </p>
-      <Link to="/contact" className="btn">
+      <Link to="/contact" className="btn red">
         Contact
       </Link>
     </section>
