@@ -17,13 +17,13 @@ const About = () => {
         </span>{" "}
         !
       </h1>
-      <p className="text-sm font-light flex text-left mt-7 ">
+      <p className="text-md  text-center mt-7 ">
         I was raised in Nigeria, moved to Texas and found my way to Utah where I
         am currently pursuing a Computer Science Degree.
-        <br />{" "}
-        <p>
+        <hr className="border-slate-200" />
+        <p className="mt-2">
           I have interests in :{" "}
-          <strong className="text-red-700">FullStack Development</strong> ,
+          <strong className="text-red-700">FullStack Development</strong>{" "}
           <strong className="text-blue-700">Fintech</strong> and{" "}
           <strong className="text-green-700">Machine Learning</strong>
         </p>
