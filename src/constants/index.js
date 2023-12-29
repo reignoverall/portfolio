@@ -4,8 +4,8 @@ import {
     contact,
     css,
     estate,
-    express,
-    git,
+    csharp,
+    java,
     github,
     html,
     javascript,
@@ -17,7 +17,6 @@ import {
     nodejs,
     pricewise,
     react,
-    redux,
     sass,
     snapgram,
     summiz,
@@ -28,14 +27,24 @@ import {
 
 export const skills = [
     {
-        imageUrl: css,
-        name: "CSS",
+        imageUrl: csharp,
+        name: "csharp",
         type: "Frontend",
     },
     {
-        imageUrl: github,
-        name: "GitHub",
+        imageUrl: java,
+        name: "Java",
         type: "Version Control",
+    },
+    // {
+    //     imageUrl: javascript,
+    //     name: "JavaScript",
+    //     type: "Frontend",
+    // },
+    {
+        imageUrl: css,
+        name: "CSS",
+        type: "Frontend",
     },
     {
         imageUrl: html,
@@ -43,37 +52,37 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: javascript,
-        name: "JavaScript",
-        type: "Frontend",
+        imageUrl: github,
+        name: "GitHub",
+        type: "Version Control",
     },
    
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
-    },
-    {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
-    },
+    // {
+    //     imageUrl: nextjs,
+    //     name: "Next.js",
+    //     type: "Frontend",
+    // },
+    // {
+    //     imageUrl: nodejs,
+    //     name: "Node.js",
+    //     type: "Backend",
+    // },
     
-    {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
-    },
-    {
-        imageUrl: tailwindcss,
-        name: "Tailwind CSS",
-        type: "Frontend",
-    },
+    // {
+    //     imageUrl: react,
+    //     name: "React",
+    //     type: "Frontend",
+    // },
+    // {
+    //     imageUrl: sass,
+    //     name: "Sass",
+    //     type: "Frontend",
+    // },
+    // {
+    //     imageUrl: tailwindcss,
+    //     name: "Tailwind CSS",
+    //     type: "Frontend",
+    // },
    
 ];
 

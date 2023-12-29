@@ -50,7 +50,7 @@ const About = () => {
         <h3 className="text-xl underline">Work Experience</h3>
         <p>No Technical Experience yet !</p>
       </div>
-      <div className="mt-12 flex hidden ">
+      <div className="mt-12 hidden ">
         <VerticalTimeline>
           {experiences.map((experience) => (
             <VerticalTimelineElement

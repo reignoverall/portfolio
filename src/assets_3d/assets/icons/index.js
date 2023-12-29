@@ -26,6 +26,8 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
+import csharp from './csharp.svg'
+import java from './java.svg'
 
 export {
     css,
@@ -40,7 +42,7 @@ export {
     nextjs,
     nodejs,
     react,
-    redux,
+    redux,java,csharp,
     sass,
     tailwindcss,
     typescript,
