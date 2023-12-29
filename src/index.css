@@ -11,9 +11,10 @@
 
 body {
   font-family: "Work Sans", sans-serif;
+}
+body:has(.resize) {
   overflow: hidden;
 }
-
 body:has(.card[data-color="blue"]:hover) {
   background-color: rgb(var(--blue-rgb) / 25%);
 }
@@ -25,7 +26,7 @@ body:has(.card[data-color="green"]:hover) {
 .font-poppins {
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 100;
+  font-weight: 200;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/poppins/v20/pxiGyp8kv8JHgFVrLPTucXtAKPY.woff2)
     format("woff2");
@@ -90,7 +91,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .cta-text {
-    @apply text-black-500 font-extrabold flex-1 text-3xl max-md:text-center;
+    @apply text-black font-extrabold flex-1 text-3xl max-md:text-center;
   }
 }
 

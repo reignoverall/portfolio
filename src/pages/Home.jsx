@@ -45,7 +45,7 @@ const Home = () => {
     adjustIslandForScreenSize();
   const [planeScale, planePosition] = adjustPlaneForScreenSize();
   return (
-    <section className="w-full h-screen relative overflow-hidden">
+    <section className="w-full h-screen resize ">
       {
         <div className="absolute top-24 left-0 right-0 z-10 flex items-center justify-center">
           {currentStage && <HomeInfo currentStage={currentStage} />}

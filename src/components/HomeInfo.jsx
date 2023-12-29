@@ -19,25 +19,17 @@ const renderContent = {
   ),
   2: (
     <h1>
-      <InfoBox
-        text="Internships: Fidelity Investments: FullStack Development Role"
-        link={"/about"}
-        btnText={"Learn More"}
-      />
+      <InfoBox text="About Me" link={"/about"} />
     </h1>
   ),
   3: (
     <h1>
-      <InfoBox
-        text="Project Number 2"
-        link={"/Projects"}
-        btnText={"Learn More"}
-      />
+      <InfoBox text="Projects!" link={"/Projects"} />
     </h1>
   ),
   4: (
     <h1>
-      <InfoBox text="Talk to Me !" link={"/contact"} btnText={"Learn More"} />
+      <InfoBox text="Contact Information" link={"/contact"} />
     </h1>
   ),
 };
