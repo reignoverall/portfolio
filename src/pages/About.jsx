@@ -47,10 +47,10 @@ const About = () => {
       </div>
 
       <div className="py-16">
-        <h3 className="text-md">Work Experience</h3>
-        <p>I don't have much technical experience but this is an Internship</p>
+        <h3 className="text-xl underline">Work Experience</h3>
+        <p>No Technical Experience yet !</p>
       </div>
-      <div className="mt-12 flex">
+      <div className="mt-12 flex hidden ">
         <VerticalTimeline>
           {experiences.map((experience) => (
             <VerticalTimelineElement
