@@ -6,6 +6,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import CTA from "../components/CTA";
+import Rand from "./Rand";
 
 const About = () => {
   return (
@@ -101,6 +102,9 @@ const About = () => {
 
       <hr className="border-slate-200"></hr>
       <CTA />
+      <button>
+        <a href="/tensor.html"> hi</a>
+      </button>
     </section>
   );
 };
