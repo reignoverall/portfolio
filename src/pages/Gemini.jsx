@@ -20,28 +20,29 @@ const Gemini = () => {
     model: "gemini-pro",
     generationConfig,
   });
+
+  let dummyText;
   async function generateContent() {
     try {
-      const prompt = "What is the capital of Azerbaijan";
+      const prompt = "What is 9 + 10";
       const result = await model.generateContent(prompt);
       const response = await result.response;
-      console.log(response.text());
-      res = result.response.text();
-      setData(res);
+      dummyText = response.text();
     } catch (error) {
       console.error("Error generating content:", error);
     }
   }
+  generateContent();
 
+  //TYPE WRITER EFFECT
   const [started, setStarted] = useState(false);
-  const dummyText = generateContent();
-
   const handleGenerate = () => {
     if (started) {
       return;
     }
     setStarted(true);
     let i = -1;
+
     timer = setInterval(() => {
       i++;
       if (i === dummyText.length - 1) clearInterval(timer);
@@ -61,15 +62,15 @@ const Gemini = () => {
   }, []);
 
   return (
-    <section className="text-xl w-screen h-screen flex items-center bg-black text-white">
+    <section className="text-xl w-screen h-screen flex items-center bg-black text-white resize">
       Gemini
       <button
         className="ml-5 rounded-md bg-yellow-50 w-10"
         onClick={handleGenerate}
       >
-        <img src={arrow} className="w-7 h-4 object-cover" />
+        <img src={arrow} className="w-7 h-4 object-contain resize" />
 
-        <button onClick={handleReset} className={styles.button}>
+        <button onClick={handleReset} className="neo-btn">
           Reset
         </button>
       </button>
