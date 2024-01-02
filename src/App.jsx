@@ -3,6 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { Home, About, Contact, Projects } from "./pages";
+import Gemini from "./pages/Gemini";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,16 +16,10 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route
-              path="/projects"
-              element={
-                <>
-                  <Projects />
-                </>
-              }
-            />
+            <Route path="/projects" element={<Projects />} />
             <Route path="contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
+            <Route path="/gemini" element={<Gemini />} />
           </Routes>
         </Router>
       </main>

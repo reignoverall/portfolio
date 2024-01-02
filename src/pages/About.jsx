@@ -9,7 +9,7 @@ import CTA from "../components/CTA";
 
 const About = () => {
   return (
-    <section className="max-container">
+    <section className="max-container w-screen h-screen">
       <h1 className="head-text">
         Hey, I'm{" "}
         <span className="red-gradient_text font-semibold drop-shadow">
