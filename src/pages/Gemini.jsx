@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import styles from "./styles.module.css";
 import { arrow } from "../assets_3d/assets/icons";
+let timer;
 
 const Gemini = () => {
   const [data, setData] = useState(undefined);
+
   let res;
   const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GOOGLE_API_KEY);
   const generationConfig = {
@@ -19,7 +22,7 @@ const Gemini = () => {
   });
   async function generateContent() {
     try {
-      const prompt = "Create a meal plan for today";
+      const prompt = "What is the capital of Azerbaijan";
       const result = await model.generateContent(prompt);
       const response = await result.response;
       console.log(response.text());
@@ -30,20 +33,47 @@ const Gemini = () => {
     }
   }
 
+  const [started, setStarted] = useState(false);
+  const dummyText = generateContent();
+
+  const handleGenerate = () => {
+    if (started) {
+      return;
+    }
+    setStarted(true);
+    let i = -1;
+    timer = setInterval(() => {
+      i++;
+      if (i === dummyText.length - 1) clearInterval(timer);
+      setData((prev) => prev + dummyText[i]);
+    }, 20);
+  };
+  const handleReset = () => {
+    setData("");
+    clearInterval(timer);
+    setStarted(false);
+  };
+
+  useEffect(() => {
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
   return (
     <section className="text-xl w-screen h-screen flex items-center bg-black text-white">
       Gemini
       <button
         className="ml-5 rounded-md bg-yellow-50 w-10"
-        onClick={() => {
-          generateContent();
-        }}
+        onClick={handleGenerate}
       >
         <img src={arrow} className="w-7 h-4 object-cover" />
+
+        <button onClick={handleReset} className={styles.button}>
+          Reset
+        </button>
       </button>
-      <p className="ml-60 rounded-3xl h-64 w-4/6 bg-neutral-500 neo-brutalism-blue ">
-        <p className="font-poppins text-left">{data}</p>
-      </p>
+      <div className={styles.container}> {!data ? "" : data}</div>
     </section>
   );
 };
