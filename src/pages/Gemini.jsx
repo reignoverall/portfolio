@@ -67,30 +67,34 @@ const Gemini = () => {
   }, []);
 
   return (
-    <section className="text-xl w-screen h-screen flex items-center bg-black text-white ">
-      Gemini
-      <textarea
-        className="text-black ml-6 rounded font-poppins"
-        value={ques}
-        placeholder="Write here"
-        onChange={(e) => {
-          setPrompt(e.target.value);
-          handleReset();
-        }}
-        autoFocus={true}
-      ></textarea>
-      <button
-        className="ml-5 rounded-md bg-yellow-50 w-10"
-        disabled={loading}
-        onClick={handleGenerate}
-      >
-        <img src={arrow} className="w-7 h-4 object-contain resize" />
-
-        <button onClick={handleReset} className="neo-btn">
-          Reset
+    <section className="text-xl w-screen h-screen flex items-center bg-black text-white justify-center ">
+      <span className="font-light header mt-16">Gemini</span>
+      <div className="flex-col ">
+        <textarea
+          className="text-black ml-6 rounded font-sans mb-20"
+          value={ques}
+          placeholder="Write here"
+          onChange={(e) => {
+            setPrompt(e.target.value);
+            handleReset();
+          }}
+          autoFocus={true}
+        ></textarea>
+        <button
+          className="ml-5 rounded-md bg-yellow-50 w-10"
+          disabled={loading}
+          onClick={handleGenerate}
+        >
+          <img src={arrow} className="w-7 h-4 object-contain " />
         </button>
-      </button>
-      <dialog className={styles.container}> {data}</dialog>
+        <textarea
+          className="gemini rounded-lg w-96 h-max"
+          value={data}
+          rows={12}
+        >
+          {data}
+        </textarea>
+      </div>
     </section>
   );
 };

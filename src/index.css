@@ -62,6 +62,10 @@ body:has(.card[data-color="green"]:hover) {
     @apply block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-normal;
   }
 
+  .textareas {
+    @apply translate-y-20 p-2.5 w-auto text-sm text-white bg-black rounded-md border border-gray-200 focus:ring-blue-500 focus:border-red-500 mt-2.5 font-poppins text-sm;
+  }
+
   .btn {
     @apply text-white bg-gradient-to-r from-[#f03518] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
   }
@@ -93,6 +97,14 @@ body:has(.card[data-color="green"]:hover) {
   .cta-text {
     @apply text-black font-extrabold flex-1 text-3xl max-md:text-center;
   }
+}
+
+.gemini {
+  color: #d2e4ff;
+  font-size: 12px;
+  border-color: cadetblue;
+  background-color: black;
+  font-family: Poppins;
 }
 
 .glassmorphism {
