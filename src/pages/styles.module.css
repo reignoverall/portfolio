@@ -9,6 +9,7 @@
   color: white;
   font-size: 10px;
   letter-spacing: 0.6px;
+  max-height: fit-content;
 }
 
 .buttonsContainer {
