@@ -1,15 +1,17 @@
 .container {
-  padding: 7px;
+  padding: 0px;
   max-width: 50rem;
   margin: 0 auto;
   display: flex;
-  width: 100%;
+  width: 60%;
   border-radius: 15px;
+  border-color: darkslategray;
   background: black;
   color: white;
   font-size: 10px;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.2px;
   max-height: fit-content;
+  margin-left: 450px;
 }
 
 .buttonsContainer {

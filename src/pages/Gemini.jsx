@@ -27,6 +27,8 @@ const Gemini = () => {
       const prompt = "How many days in January";
       const result = await model.generateContent(ques);
       const response = await result.response;
+      console.log(result);
+
       setLoading(false);
       dummyText = response.text();
       return dummyText;
@@ -44,10 +46,11 @@ const Gemini = () => {
     }
     setStarted(true);
     let i = -1;
-
     timer = setInterval(() => {
       i++;
+
       if (i === res.length - 1) clearInterval(timer);
+
       setData((prev) => prev + res[i]);
     }, 20);
   }
@@ -64,13 +67,17 @@ const Gemini = () => {
   }, []);
 
   return (
-    <section className="text-xl w-screen h-screen flex items-center bg-black text-white resize">
+    <section className="text-xl w-screen h-screen flex items-center bg-black text-white ">
       Gemini
       <textarea
         className="text-black ml-6 rounded font-poppins"
         value={ques}
         placeholder="Write here"
-        onChange={(e) => setPrompt(e.target.value)}
+        onChange={(e) => {
+          setPrompt(e.target.value);
+          handleReset();
+        }}
+        autoFocus={true}
       ></textarea>
       <button
         className="ml-5 rounded-md bg-yellow-50 w-10"
@@ -83,7 +90,7 @@ const Gemini = () => {
           Reset
         </button>
       </button>
-      <div className={styles.container}> {!data ? "" : data}</div>
+      <dialog className={styles.container}> {data}</dialog>
     </section>
   );
 };
